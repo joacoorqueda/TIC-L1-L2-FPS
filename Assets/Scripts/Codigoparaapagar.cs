@@ -6,15 +6,21 @@ using UnityEngine.UI;
 
 public class Codigoparaapagar : MonoBehaviour
 {
-    [SerializeField] GameObject input;
+    public GameObject input;
     public InputField codigo;
     public GameObject parlantedos;
     public GameObject parlanteuno;
+
+    public GameObject NPCInteract;
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         input.SetActive(false);
+        NPCInteract.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,13 +39,38 @@ public class Codigoparaapagar : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
         input.SetActive(true);
+
+        if(other.gameObject.tag == "NPCPOLLO")
+        {
+            
+            NPCInteract.SetActive(true);
         }
+        
+    }
 
     void OnTriggerExit()
     {
         input.SetActive(false);
+
+        NPCInteract.SetActive(false);
     }
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
