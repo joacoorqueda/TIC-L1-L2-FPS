@@ -13,6 +13,10 @@ public class Codigoparaapagar : MonoBehaviour
 
     public GameObject NPCInteract;
 
+    public GameObject TextF;
+
+    public bool hasTalked;
+
 
 
 
@@ -21,6 +25,7 @@ public class Codigoparaapagar : MonoBehaviour
     {
         input.SetActive(false);
         NPCInteract.SetActive(false);
+        TextF.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,6 +40,8 @@ public class Codigoparaapagar : MonoBehaviour
             {
                 Destroy(parlantedos);
                 Destroy(parlanteuno);
+
+                hasTalked = true;
             }
         }
     }
@@ -43,25 +50,39 @@ public class Codigoparaapagar : MonoBehaviour
     {
         input.SetActive(true);
 
-        if(other.gameObject.tag == "NPCPOLLO")
+        if (other.gameObject.tag == "NPCPOLLO")
         {
-            
-            NPCInteract.SetActive(true);
+            if (hasTalked == false)
+            {
+
+
+                NPCInteract.SetActive(true);
+            }
+            if (hasTalked == true)
+            {
+                TextF.SetActive(true);
+            }
+
+        }
+
+        if(hasTalked == true)
+        {
+
         }
         
     }
 
-    void OnTriggerExit()
+    void OnTriggerExit(Collider other)
     {
         input.SetActive(false);
 
         NPCInteract.SetActive(false);
+
+        if (other.gameObject.CompareTag("NPCPOLLO"))
+        {
+            NPCInteract.SetActive(false);
+        }
     }
-
-
-   
-
-
 
 
 
