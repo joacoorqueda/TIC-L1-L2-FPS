@@ -10,7 +10,8 @@ public class Codigoparaapagar : MonoBehaviour
     public InputField codigo;
     public GameObject parlantedos;
     public GameObject parlanteuno;
-
+    public GameObject Pollo1;
+    public GameObject Pollo2;
     public GameObject NPCInteract;
 
     public GameObject TextF;
@@ -40,6 +41,8 @@ public class Codigoparaapagar : MonoBehaviour
             {
                 Destroy(parlantedos);
                 Destroy(parlanteuno);
+                Destroy(Pollo1);
+                Destroy(Pollo2);
 
                 hasTalked = true;
             }

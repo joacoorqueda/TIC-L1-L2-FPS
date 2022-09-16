@@ -245,6 +245,8 @@ MonoBehaviour:
   codigo: {fileID: 275830130}
   parlantedos: {fileID: 1591334964}
   parlanteuno: {fileID: 230068412}
+  Pollo1: {fileID: 1106984307}
+  Pollo2: {fileID: 1106984317}
   NPCInteract: {fileID: 2040448064}
   TextF: {fileID: 1500974082}
   hasTalked: 0
@@ -11825,7 +11827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591334964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.095, y: 2.741, z: 6.286}
+  m_LocalPosition: {x: 3.136, y: 2.741, z: 6.286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
